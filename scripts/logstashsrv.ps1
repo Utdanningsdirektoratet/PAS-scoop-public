@@ -47,8 +47,8 @@ if ($command -eq 'install') {
     nssm install $serviceName $logstashAppFile "-f `"$configPath`""
     Write-host "Setting application directory to $PSScriptRoot"
     nssm set $serviceName AppDirectory "$PSScriptRoot\bin" 2>&1 | out-null
-    nssm set $serviceName AppStdout "$logsDirectory\stdout.log" 2>&1 | out-null
-    nssm set $serviceName AppStderr "$logsDirectory\stderr.log" 2>&1 | out-null
+    nssm set $serviceName AppStdout "$logsDirectory\$serviceName-stdout.log" 2>&1 | out-null
+    nssm set $serviceName AppStderr "$logsDirectory\$serviceName-stderr.log" 2>&1 | out-null
     nssm set $serviceName AppEnvironmentExtra JAVA_HOME=$env:JAVA_HOME
     Write-host "Created service $serviceName. To start service, type: $(split-path $MyInvocation.MyCommand.Path -Leaf) start"
 	Exit 0
