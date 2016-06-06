@@ -5,12 +5,12 @@
 	"url":
 		[
 			"https://download.elastic.co/kibana/kibana/kibana-4.4.2-windows.zip",
-			"https://raw.githubusercontent.com/Utdanningsdirektoratet/PAS-scoop-public/master/scripts/kibanasrv.ps1"
+			"https://raw.githubusercontent.com/Utdanningsdirektoratet/PAS-scoop-public/02045e138e1bd8bba5454df36a471c3174f68366/scripts/kibanasrv.ps1"
 		],
 	"hash":
 		[
 			"sha1:413e1d020102a0707f3cddc963d6acfd214b344f",
-			"3066D685513EB82D7EC02CA2F1338EDC2F6C2A49A1366AAD32BEE48468437E95"
+			"A76FECDA2FB83D1FE0750A389ADE012409FC5B3B10F3E7546979F3A397C4BBAE"
 		],
 	"extract_dir": "kibana-4.4.2-windows",
 	"bin" : ["kibanasrv.ps1","bin\\kibana.bat"],

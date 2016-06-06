@@ -4,9 +4,9 @@
 	"depends" : ["nssm224","openjdk170u80"],
 	"url" : [
         "https://download.elastic.co/logstash/logstash/logstash-2.3.0.zip",
-        "https://raw.githubusercontent.com/Utdanningsdirektoratet/PAS-scoop-public/master/scripts/logstashsrv.ps1"
+        "https://raw.githubusercontent.com/Utdanningsdirektoratet/PAS-scoop-public/02045e138e1bd8bba5454df36a471c3174f68366/scripts/logstashsrv.ps1"
     ],
-	"hash" : ["sha1:381d61527091c4a4f0cd04e99fae0c6a330aa88c","52cf19e2c178cbb43bfa101ae8d583447975040bd27f99ca45fae63b5ba91f05"],
+	"hash" : ["sha1:381d61527091c4a4f0cd04e99fae0c6a330aa88c","F88776C8824CE3D6D8F668426E273A47595EDCEAA2441BFED304D9543403D4E5"],
 	"bin": [ "bin\\logstash.bat", [ "bin\\logstash-plugin.bat", "logstash_plugin"], ["logstashsrv.ps1", "logstash_service"]],
 	"extract_dir" : "logstash-2.3.0"
 }
