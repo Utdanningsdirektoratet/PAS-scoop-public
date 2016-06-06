@@ -4,6 +4,6 @@
 	"depends":"python27",
 	"url": ["https://raw.githubusercontent.com/rabbitmq/rabbitmq-management/rabbitmq_v3_6_1/bin/rabbitmqadmin",
 		"https://raw.githubusercontent.com/Utdanningsdirektoratet/PAS-scoop-public/master/scripts/rabbitmqadmin.ps1"],
-	"hash": ["22AA5E9A67BFB8A87C2CD461BAE26974CF00BBCC72A65AF3A8F796B25BBCCFEF", "fb670856ead231bb948b8144752fa32cfd39a15825b7815239709a07fa8ae5f4"],
+	"hash": ["22AA5E9A67BFB8A87C2CD461BAE26974CF00BBCC72A65AF3A8F796B25BBCCFEF", "22FD44729E7DCE5F614E53B3F9339811FCBECA425EDB394BD07225400E60C5C5"],
 	"bin" : "rabbitmqadmin.ps1"
 }
