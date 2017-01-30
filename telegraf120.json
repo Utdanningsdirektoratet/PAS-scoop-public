@@ -10,7 +10,7 @@
 	"hash":
 		[
 			"sha1:9fb0b2c7fef1ee22e15eac0974e816d701deaa47",
-			"sha1:4aac40fbcb483bc16b01217bfe3e4c60fc71b9e"
+			"sha1:f4aac40fbcb483bc16b01217bfe3e4c60fc71b9e"
 		],
 	"extract_dir": "telegraf",
 	"bin" : ["telegrafsrv.ps1","telegraf.exe"],
