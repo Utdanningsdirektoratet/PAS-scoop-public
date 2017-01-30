@@ -5,12 +5,12 @@
 	"url":
 		[
 			"https://dl.influxdata.com/telegraf/releases/telegraf-1.2.0_windows_amd64.zip",
-			"https://raw.githubusercontent.com/Utdanningsdirektoratet/PAS-scoop-public/32d38bdbf35f6291d3e3cda80e06863c1f3effdb/scripts/telegrafsrv.ps1"
+			"https://raw.githubusercontent.com/Utdanningsdirektoratet/PAS-scoop-public/ff1103ca8d3f1fc2d55a73d080bb94a0098a1341/scripts/telegrafsrv.ps1"
 		],
 	"hash":
 		[
 			"sha1:9fb0b2c7fef1ee22e15eac0974e816d701deaa47",
-			"sha1:dbb81d9f4f4df128c1aca8b9a339f7c7588f74b0"
+			"sha1:4aac40fbcb483bc16b01217bfe3e4c60fc71b9e"
 		],
 	"extract_dir": "telegraf",
 	"bin" : ["telegrafsrv.ps1","telegraf.exe"],
