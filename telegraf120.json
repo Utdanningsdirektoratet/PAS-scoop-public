@@ -1,0 +1,18 @@
+{
+	"homepage": "https://www.influxdata.com/time-series-platform/telegraf/",
+	"version": "1.2.0",
+	"depends" : "nssm224",
+	"url":
+		[
+			"https://dl.influxdata.com/telegraf/releases/telegraf-1.2.0_windows_amd64.zip",
+			"https://raw.githubusercontent.com/Utdanningsdirektoratet/PAS-scoop-public/02045e138e1bd8bba5454df36a471c3174f68366/scripts/telegrafsrv.ps1"
+		],
+	"hash":
+		[
+			"sha1:9fb0b2c7fef1ee22e15eac0974e816d701deaa47",
+			"61A3C07953A1ED5D53D6AF1AF4163D401B32F06F00DD762C7CB020BE2DFA94FD"
+		],
+	"extract_dir": "telegraf",
+	"bin" : ["telegrafsrv.ps1","telegraf.exe"],
+	"travel_dirs" : ["logs"]
+}
