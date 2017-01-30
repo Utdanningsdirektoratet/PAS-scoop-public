@@ -7,7 +7,9 @@ param(
 	[ValidateSet('install','start','stop','remove')]
 	$command,
 	[Parameter(Mandatory=$false,Position=2)]
-	$serviceName = 'telegraf'
+	$serviceName = 'telegraf',
+    [Parameter(Mandatory=$false,Position=3)]
+    $configFile
 )
 $ErrorActionPreference = 'Stop'
 
@@ -20,12 +22,17 @@ if ($command -eq 'install') {
         Write-Error '$serviceName service already exists. So quitting.'
     }
 
-    $kibanaAppFile = "$PSScriptRoot\telegraf.exe"
+    $configPath = resolve-path $configFile
+    if (-not(test-path -path $configPath -pathtype leaf)) {
+        Write-error "Configuration file not found: $configFile"
+    }
+
+    $telegrafAppFile = "$PSScriptRoot\telegraf.exe"
 
     $logsDirectory = "$PSScriptRoot\logs"
     if (-not(test-path -Path $logsDirectory -PathType Container)) { mkdir $logsDirectory | out-null }
 
-    nssm install $serviceName $kibanaAppFile
+    nssm install $serviceName $telegrafAppFile "--config `"$configPath`""
     Write-host "Setting application directory to $PSScriptRoot"
     nssm set $serviceName AppDirectory "$PSScriptRoot\bin" 2>&1 | out-null
     nssm set $serviceName AppStdout "$logsDirectory\stdout.log" 2>&1 | out-null
