@@ -4,15 +4,13 @@
 	"depends" : "nssm224",
 	"url":
 		[
-			"https://dl.influxdata.com/telegraf/releases/telegraf-1.2.0_windows_amd64.zip",
-			"https://raw.githubusercontent.com/Utdanningsdirektoratet/PAS-scoop-public/ff1103ca8d3f1fc2d55a73d080bb94a0098a1341/scripts/telegrafsrv.ps1"
+			"https://dl.influxdata.com/telegraf/releases/telegraf-1.2.0_windows_amd64.zip"
 		],
 	"hash":
 		[
-			"sha1:9fb0b2c7fef1ee22e15eac0974e816d701deaa47",
-			"sha1:f4aac40fbcb483bc16b01217bfe3e4c60fc71b9e"
+			"sha1:9fb0b2c7fef1ee22e15eac0974e816d701deaa47"
 		],
 	"extract_dir": "telegraf",
-	"bin" : ["telegrafsrv.ps1","telegraf.exe"],
+	"bin" : ["telegraf.exe"],
 	"travel_dirs" : ["logs"]
 }
