@@ -1,6 +1,6 @@
 {
     "homepage": "https://www.elastic.co/products/logstash",
-	"version": "5.1.1",
+	"version": "5.2.0",
 	"depends" : ["nssm224", "openjdk180_102_2"],
 	"url" : [
         "https://artifacts.elastic.co/downloads/logstash/logstash-5.2.0.tar.gz",
