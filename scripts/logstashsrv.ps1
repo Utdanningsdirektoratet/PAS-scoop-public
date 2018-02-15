@@ -3,12 +3,12 @@
     Install, starts, stops, and removes Windows Service for Kibana.
 #>
 param(
-	[Parameter(Mandatory=$true,Position=1)]
-	[ValidateSet('install','start','stop','remove')]
-	$command,
-	[Parameter(Mandatory=$false,Position=2)]
-	$serviceName = 'logstash',
-    [Parameter(Mandatory=$false,Position=3)]
+    [Parameter(Mandatory = $true, Position = 1)]
+    [ValidateSet('install', 'start', 'stop', 'remove')]
+    $command,
+    [Parameter(Mandatory = $false, Position = 2)]
+    $serviceName = 'logstash',
+    [Parameter(Mandatory = $false, Position = 3)]
     $configFile
 )
 $ErrorActionPreference = 'Stop'
@@ -17,7 +17,7 @@ $ErrorActionPreference = 'Stop'
 $PSScriptRoot = if ($PSScriptRoot) { $PSScriptRoot } else { split-path $MyInvocation.MyCommand.Path }
 
 if ($command -eq 'install') {
-	get-service $serviceName -ErrorAction 'SilentlyContinue' | out-null
+    get-service $serviceName -ErrorAction 'SilentlyContinue' | out-null
     if ($?) {
         Write-Error 'Logstash service already exists. So quitting.'
     }
@@ -40,18 +40,19 @@ if ($command -eq 'install') {
     }
 
     $logstashAppFile = "$PSScriptRoot\bin\logstash.bat"
+    $dataDir = "$PSScriptRoot\data\$serviceName"
 
     $logsDirectory = "$PSScriptRoot\logs"
     if (-not(test-path -Path $logsDirectory -PathType Container)) { mkdir $logsDirectory | out-null }
 
-    nssm install $serviceName $logstashAppFile "-f `"$configPath`""
+    nssm install $serviceName $logstashAppFile "-f `"$configPath`" --path.data `"$dataDir`""
     Write-host "Setting application directory to $PSScriptRoot"
     nssm set $serviceName AppDirectory "$PSScriptRoot\bin"
     nssm set $serviceName AppStdout "$logsDirectory\$serviceName-stdout.log"
     nssm set $serviceName AppStderr "$logsDirectory\$serviceName-stderr.log"
     nssm set $serviceName AppEnvironmentExtra JAVA_HOME=$env:JAVA_HOME
     Write-host "Created service $serviceName. To start service, type: $(split-path $MyInvocation.MyCommand.Path -Leaf) start"
-	Exit 0
+    Exit 0
 }
 
 get-service $serviceName -ErrorAction 'SilentlyContinue' | out-null
@@ -59,7 +60,7 @@ if (!$?) {
     Write-Error "Logstash service with name '$serviceName' not found. So quitting."
 }
 
-if (@('start','stop') -contains $command) {
+if (@('start', 'stop') -contains $command) {
     nssm $command $serviceName
     if ($command -eq 'start') {
         Write-host "Started Logstash service."
