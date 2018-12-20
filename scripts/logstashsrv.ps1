@@ -53,7 +53,7 @@ if ($command -eq 'install') {
     nssm set $serviceName AppRotateFiles 1
     nssm set $serviceName AppRotateOnline 1
     nssm set $serviceName AppRotateSeconds 86400
-    nssm set $serviceName AppRotateBytes 1048576
+    nssm set $serviceName AppRotateBytes 52428800
     nssm set $serviceName AppEnvironmentExtra JAVA_HOME=$env:JAVA_HOME
     Write-host "Created service $serviceName. To start service, type: $(split-path $MyInvocation.MyCommand.Path -Leaf) start"
     Exit 0
