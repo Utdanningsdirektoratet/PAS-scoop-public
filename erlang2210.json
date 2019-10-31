@@ -1,0 +1,26 @@
+{
+	"homepage": "http://www.erlang.org",
+	"version": "22.1.0",
+	"license": "http://www.apache.org/licenses/LICENSE-2.0",
+	"architecture": {
+		"64bit": {
+			"url": "http://erlang.org/download/otp_win64_22.1.exe",
+			"hash": "9cm+0y+BTNAq1lgZj54+pybB0qlnxLufnl6gn3A1qxQ="
+		},
+		"32bit": {
+			"url": "http://erlang.org/download/otp_win32_22.1.exe",
+			"hash": "GZBDTNNWreKKu1ku3xvfRKIIBWJoNbtvcV9ZQ7zd90I="
+		}
+	},
+	"bin": ["bin\\erl.exe", "bin\\escript.exe"],
+	"env_set": {
+		"ERLANG_HOME": "$dir"
+	},
+	"installer": {
+		"args": ["/S", "/D=$dir"]
+	},
+	"uninstaller": {
+		"file": "Uninstall.exe",
+		"args": ["/S"]
+	}
+}

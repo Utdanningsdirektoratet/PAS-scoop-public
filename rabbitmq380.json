@@ -1,0 +1,21 @@
+{
+	"homepage": "https://www.rabbitmq.com/",
+	"version": "3.8.0",
+	"license": "https://github.com/rabbitmq/rabbitmq-server/blob/master/LICENSE-MPL-RabbitMQ",
+	"url": "https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.8.0/rabbitmq-server-windows-3.8.0.zip",
+	"hash": "XU8xDu+WnfXmZSsziHf/aEkF6EUmwG5KkQUVTBtjGN4=",
+	"depends": "erlang2210",
+	"extract_dir": "rabbitmq_server-3.8.0",
+	"bin": [
+		"sbin\\rabbitmq-server.bat",
+		"sbin\\rabbitmq-service.bat",
+		"sbin\\rabbitmqctl.bat",
+		"sbin\\rabbitmq-plugins.bat",
+		"sbin\\rabbitmq-env.bat",
+		"sbin\\rabbitmq-echopid.bat",
+		"sbin\\rabbitmq-defaults.bat"
+	],
+	"env_set": {
+		"RABBITMQ_SERVER": "$dir"
+	}
+}
