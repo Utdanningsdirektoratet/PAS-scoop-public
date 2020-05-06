@@ -32,9 +32,9 @@ if ($command -eq 'install') {
     }
 
     $filebeatAppFile = "$PSScriptRoot\filebeat.exe"
-    $homeDir = "$PSScriptRoot\home\$serviceName"
+    $homeDir = "$PSScriptRoot"
     $dataDir = "$PSScriptRoot\data\$serviceName"
-    $logsDirectory = "$PSScriptRoot\logs"
+    $logsDirectory = "$PSScriptRoot\logs\$serviceName"
 
     if (-not(test-path -Path $logsDirectory -PathType Container)) { 
         New-Item `
