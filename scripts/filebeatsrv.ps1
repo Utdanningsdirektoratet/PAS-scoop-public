@@ -31,7 +31,7 @@ if ($command -eq 'install') {
         Write-error "Configuration file not found: $configFile"
     }
 
-    $filebeatAppFile = "$PSScriptRoot\bin\logstash.bat"
+    $filebeatAppFile = "$PSScriptRoot\filebeat.exe"
     $homeDir = "$PSScriptRoot\home\$serviceName"
     $dataDir = "$PSScriptRoot\data\$serviceName"
     $logsDirectory = "$PSScriptRoot\logs"
