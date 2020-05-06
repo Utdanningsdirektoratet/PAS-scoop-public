@@ -8,7 +8,7 @@
 	],
 	"hash": [
 		"sha512:80b82fd132121f744fb3717617604e588be1e58ff9971a5b1e4958616d3e5e04a97c00079e0fbe36564d436bb63568ec18a5b64de2aeeb858ed4c5247a8828e9",
-		""
+		"sha256:96ebfc35e13830e2622408c79df2d15810fbe8ce6732eafea3fb60799e2eca66"
 	],
 	"bin": ["filebeat.exe", ["filebeatsrv.ps1", "filebeat_service"]],
 	"extract_dir": "filebeat-7.6.2-windows-x86_64"
